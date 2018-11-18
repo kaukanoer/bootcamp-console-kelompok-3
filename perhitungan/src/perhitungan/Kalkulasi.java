@@ -6,15 +6,14 @@ import java.util.Scanner;
 
 public class Kalkulasi {
     
-//    metode untuk membuat random angka unique
     static void randomAngka(int panjangData) {
-        ArrayList<Integer> angka = new ArrayList<>(); //membuat wadah array dengan nama angka
+        ArrayList<Integer> angka = new ArrayList<>(); 
         for (int element = 0; element <= 9; element++) {
-            angka.add(element);// pengulangan untuk nambahin element array dengan value 0 - 9
+            angka.add(element);
         }
-        Collections.shuffle(angka); //untuk bikin list nya jadi acak, yang awalnya arraylist isinya 123, jadi 231 atau 132 dst
+        Collections.shuffle(angka); 
         for (int count = 0; count < panjangData; count++) {
-            System.out.print(angka.get(count) + " "); // mengeluarkan satu per satu arraylist yang udah di acak, diulang sebanyak panjangData
+            System.out.print(angka.get(count) + " "); 
         }
     }
 //metode untuk menghitung uang pecahan
@@ -113,24 +112,20 @@ public class Kalkulasi {
     }
 
     public static void main(String[] args) {
-//        untuk menjalankan metode random angka unique
         Kalkulasi panggil = new Kalkulasi();
-        Scanner s = new Scanner(System.in);//metod untuk ba ainputan dari user
+        Scanner s = new Scanner(System.in);
         Boolean ulangi = false;
         do {
             System.out.print("Masukkan panjang data: ");
-            int masukAngka = s.nextInt();//menampung inputan dari user kedalam int masukAngka
-            if (masukAngka >= 11) {//jika input dari user > 10, maka harus mengulang input angka nya
+            int masukAngka = s.nextInt();
+            if (masukAngka >= 11) 
+            {
                 System.err.println("Angka maksimal adalah 10");
                 ulangi = true;
             } else {//
-                panggil.randomAngka(masukAngka); // kalau angkanya udh <=10, jadi print angka sebanyak (masukAngka = panjangData) 
+                panggil.randomAngka(masukAngka); 
                 break;
             }
         } while (ulangi = true);
-        
-//        untuk menjalankan metode uang pecahan
-//        System.out.print("Masukkan sejumlah uang: ");
-//        panggil.hitungUang(s.nextInt());
     }
 }
