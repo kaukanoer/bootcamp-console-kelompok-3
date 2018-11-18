@@ -126,6 +126,10 @@ public class Kalkulasi {
                 break;
             }
         } while (ulangi = true);
-
+        
+//        untuk menjalankan metode uang pecahan
+//        System.out.print("Masukkan sejumlah uang: ");
+//        panggil.hitungUang(s.nextInt());    
+    
     }
 }
