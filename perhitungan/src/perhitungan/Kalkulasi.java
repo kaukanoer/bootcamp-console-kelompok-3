@@ -8,7 +8,7 @@ public class Kalkulasi {
     
 //    metode untuk membuat random angka unique
     static void randomAngka(int panjangData) {
-        ArrayList<Integer> angka = new ArrayList<>(); //membuat wadah array dengan nama array, naman arraynya adalah angka
+        ArrayList<Integer> angka = new ArrayList<>(); //membuat wadah array dengan nama angka
         for (int element = 0; element <= 9; element++) {
             angka.add(element);// pengulangan untuk nambahin element array dengan value 0 - 9
         }
