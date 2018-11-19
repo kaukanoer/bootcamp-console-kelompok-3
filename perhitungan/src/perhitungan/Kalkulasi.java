@@ -16,7 +16,6 @@ public class Kalkulasi {
             System.out.print(angka.get(count) + " "); 
         }
     }
-//metode untuk menghitung uang pecahan
     static void hitungUang(int inputUang) {
         int seratusRibu = 0;
         int limaPuluh = 0;
@@ -113,19 +112,21 @@ public class Kalkulasi {
 
     public static void main(String[] args) {
         Kalkulasi panggil = new Kalkulasi();
-        Scanner s = new Scanner(System.in);
-        Boolean ulangi = false;
+        Scanner s = new Scanner(System.in);        
         do {
             System.out.print("Masukkan panjang data: ");
             int masukAngka = s.nextInt();
             if (masukAngka >= 11) 
             {
                 System.err.println("Angka maksimal adalah 10");
-                ulangi = true;
-            } else {//
+                
+            } else {
                 panggil.randomAngka(masukAngka); 
                 break;
             }
-        } while (ulangi = true);
+        } while (true);
+//        untuk menjalankan metode uang pecahan
+//        System.out.print("Masukkan sejumlah uang: ");
+//        panggil.hitungUang(s.nextInt());    
     }
 }
