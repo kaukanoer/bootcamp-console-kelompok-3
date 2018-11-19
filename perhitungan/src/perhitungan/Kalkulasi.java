@@ -112,24 +112,21 @@ public class Kalkulasi {
 
     public static void main(String[] args) {
         Kalkulasi panggil = new Kalkulasi();
-        Scanner s = new Scanner(System.in);
-        Boolean ulangi = false;
+        Scanner s = new Scanner(System.in);        
         do {
             System.out.print("Masukkan panjang data: ");
             int masukAngka = s.nextInt();
             if (masukAngka >= 11) 
             {
                 System.err.println("Angka maksimal adalah 10");
-                ulangi = true;
-            } else {//
-                panggil.randomAngka(masukAngka);  
+                
+            } else {
+                panggil.randomAngka(masukAngka); 
                 break;
             }
-        } while (ulangi = true);
-        
+        } while (true);
 //        untuk menjalankan metode uang pecahan
 //        System.out.print("Masukkan sejumlah uang: ");
 //        panggil.hitungUang(s.nextInt());    
-    
     }
 }
